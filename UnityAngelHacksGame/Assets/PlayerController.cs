@@ -52,18 +52,16 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.SetBool("isMoving", false);
+                animator.SetFloat("horizontal", movementInput.x);
+                animator.SetFloat("vertical", movementInput.y);
+
             }
 
-            // Set direction of sprite to movement direction
-            if (movementInput.x < 0)
-            {
-                spriteRenderer.flipX = true;
-            }
-            else if (movementInput.x > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
         }
+
+        animator.SetFloat("horizontal", movementInput.x);
+        animator.SetFloat("vertical", movementInput.y);
+
     }
 
     private bool TryMove(Vector2 direction)
@@ -100,12 +98,13 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
+    /*
     void OnFire()
     {
         animator.SetTrigger("swordAttack");
     }
 
-    /*
+    
     public void SwordAttack()
     {
         LockMovement();
