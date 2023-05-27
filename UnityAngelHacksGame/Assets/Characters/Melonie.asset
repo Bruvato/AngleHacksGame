@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1a8991a78bd4dd9a172f9d732681fa, type: 3}
+  m_Name: Melonie
+  m_EditorClassIdentifier: 
+  name: Melonie
+  maxHp: 0
+  maxStam: 0
+  atk: 0
+  def: 0
+  vit: 0
+  characterId: 0
+  highRes: {fileID: 21300000, guid: d220cde58b6bd41c98b38e0e95e96574, type: 3}
+  front: {fileID: 21300000, guid: e78e88a3bb65c4eda979605bd6f38ef7, type: 3}
+  right: {fileID: 21300000, guid: 9cf7526a80f854a48878f573476174cf, type: 3}
+  left: {fileID: 21300000, guid: 17b771945191a48c88d4db391264eed6, type: 3}
+  back: {fileID: 21300000, guid: e726df04ca044455daba3bdcc3b39e5c, type: 3}
