@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class useSkill : MonoBehaviour
 {
+    private Character heroStats;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+
+    }
+    void Cast(Character target, Skill skill)
     {
         
-    }
-    void useSkill(){
-        
+        target.reduceHp((int)Mathf.Round(heroStats.getAtk()*skill.atkmult));
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

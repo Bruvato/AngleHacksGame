@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public delegate void selectCharacterEvent(Character target);
+    public delegate void selectSkillEvent(Skill action);
+
     public void StartGame()
     {
         //Start
@@ -25,6 +28,12 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("Quit");
         
         // SceneManager.LoadScene();
+    }
+    public void selectTarget(){
+        
+    }
+    public void selectSkill(){
+        
     }
 
     // Update is called once per frame
