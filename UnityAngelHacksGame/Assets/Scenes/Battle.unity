@@ -2783,6 +2783,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4726636645632373354, guid: 44f9977c728ba4bbe927c2a227fb3df6, type: 3}
+      propertyPath: caster
+      value: 
+      objectReference: {fileID: 1089673820}
+    - target: {fileID: 4726636645632373354, guid: 44f9977c728ba4bbe927c2a227fb3df6, type: 3}
+      propertyPath: useSkill
+      value: 
+      objectReference: {fileID: 2093171427}
+    - target: {fileID: 4726636645632373354, guid: 44f9977c728ba4bbe927c2a227fb3df6, type: 3}
+      propertyPath: battleManager
+      value: 
+      objectReference: {fileID: 2093171424}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44f9977c728ba4bbe927c2a227fb3df6, type: 3}
 --- !u!1001 &6828667538442531983
