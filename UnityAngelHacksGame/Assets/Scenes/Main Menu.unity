@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 272697413}
   - component: {fileID: 272697412}
   - component: {fileID: 272697411}
+  - component: {fileID: 272697414}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -320,9 +321,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.48, g: 0.48, b: 0.48, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -341,19 +342,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 272697412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1843621235}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &272697412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +381,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272697409}
   m_CullTransparentMesh: 1
+--- !u!95 &272697414
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272697409}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c28dba6f661ff440892ffcc28d897d4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &546580495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,9 +1026,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.48, g: 0.48, b: 0.48, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1038,19 +1047,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1605670461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1843621235}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1605670461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,14 +1237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b093c2134114b2782ae25cc7b27a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characters: {fileID: 2094368548}
-  sprites:
-  - {fileID: 21300000, guid: ee3c0b87b270b467ab53ac89bee96671, type: 3}
-  - {fileID: 21300000, guid: 1316c1fa5bfa9420c944bee4eaa1dedf, type: 3}
-  - {fileID: 21300000, guid: 7df72d813f5b24d89873b7bf574cf8b8, type: 3}
-  - {fileID: 21300000, guid: 325cd3be2bd874f7db5ba11cbdf94782, type: 3}
-  - {fileID: 21300000, guid: 4f745c7839e414ab08e79f281591020c, type: 3}
-  dur: 1
 --- !u!1 &1849362396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,9 +1375,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.48, g: 0.48, b: 0.48, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1407,19 +1396,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853839758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1843621235}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: Settings
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1853839758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,6 +1446,7 @@ GameObject:
   - component: {fileID: 2094368549}
   - component: {fileID: 2094368551}
   - component: {fileID: 2094368550}
+  - component: {fileID: 2094368552}
   m_Layer: 5
   m_Name: characters
   m_TagString: Untagged
@@ -1534,3 +1512,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368548}
   m_CullTransparentMesh: 1
+--- !u!95 &2094368552
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094368548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1351a086f1614a38b0c44bebbe136fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
