@@ -10,7 +10,7 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Start");
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("SampleScene");
     }
     public void Settings()
     {
