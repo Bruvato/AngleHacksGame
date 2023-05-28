@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BattleManager : MonoBehaviour
+public class EnemyBattleManager : MonoBehaviour
 {
     private Dictionary<int, Character> orderList;//character, id
     // [SerializeField]private ButtonManager bManager;
@@ -75,7 +75,7 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //
         if(Input.GetKeyDown(KeyCode.Alpha1)){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[0].getId())){

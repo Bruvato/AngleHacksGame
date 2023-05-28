@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "HeroData", menuName = "~/HeroData", order = 0)]
-public class HeroData : ScriptableObject
+[CreateAssetMenu(fileName = "EnemyData", menuName = "~/EnemyData", order = 0)]
+public class EnemyData : ScriptableObject
 {
-    public bool isEnemy;
-    public string heroName;
+    public string EnemyName;
     public int maxHp, maxStam;
-    public int atk, def, vit, heroId;
+    public int atk, def, vit, EnemyId;
     public int characterId;
     public Sprite highRes, front, right, left, back;
     public GameObject battleCanvas;

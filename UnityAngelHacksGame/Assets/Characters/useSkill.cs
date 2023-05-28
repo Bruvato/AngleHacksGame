@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class useSkill : MonoBehaviour
+public class UseSkill : MonoBehaviour
 {
     private Character heroStats;
     
@@ -11,7 +11,7 @@ public class useSkill : MonoBehaviour
     {
 
     }
-    void Cast(Character target, Skill skill)
+    public void Cast(Character user,Character target, Skill skill)
     {
         
         target.reduceHp((int)Mathf.Round(heroStats.getAtk()*skill.atkmult));
