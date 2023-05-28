@@ -7,11 +7,10 @@ public class HeroData : ScriptableObject
 {
     public string heroName;
     public int maxHp, maxStam;
-    public int atk, def, vit;
+    public int atk, def, vit, heroId;
     public int characterId;
     public Sprite highRes, front, right, left, back;
     public GameObject battleCanvas;
-    
     
 
 
