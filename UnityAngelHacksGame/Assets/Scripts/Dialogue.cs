@@ -9,12 +9,16 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private string[] lines;
     [SerializeField] private float textSpeed;
 
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip sfx;
+
     private int i;
     // Start is called before the first frame update
     void Start()
     {
         textCompenent.text = string.Empty;
         StartDialogue();
+        src.clip = sfx;
     }
 
     // Update is called once per frame
@@ -46,6 +50,7 @@ public class Dialogue : MonoBehaviour
         foreach (char c in lines[i].ToCharArray())
         {
             textCompenent.text += c;
+            src.Play();
             yield return new WaitForSeconds(textSpeed);
         }
     }
