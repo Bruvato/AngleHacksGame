@@ -5,13 +5,16 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] private HeroData heroData;
+
     // Start is called before the first frame update
-    private int trueMaxHp, currentHp, trueMaxStam, currentStam;
+    private int trueMaxHp, currentHp, trueMaxStam, currentStam, characterId, level;
     void Awake(){
         trueMaxHp = heroData.maxHp;
         currentHp = trueMaxHp;
         trueMaxStam = heroData.maxStam;
         currentStam = trueMaxStam;
+        characterId = heroData.heroId;
+        
     }
     // Update is called once per frame
     
@@ -23,13 +26,15 @@ public class Character : MonoBehaviour
         }
 
     }
+    public int getId(){
+        return characterId;
+    }
     public int getAtk(){
         return heroData.atk;
     }
     public int getCurrentStam(){
         return currentStam;
     }
-    
 
     public void reduceStamina(int amount){
         currentStam -= amount;
