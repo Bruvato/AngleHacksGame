@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public delegate void selectCharacterEvent(Character target);
-    public delegate void selectSkillEvent(Skill action);
+
+    private Skill selectedSkill;
+    private Character selectedCharacter;
 
     public void StartGame()
     {
@@ -31,9 +32,10 @@ public class ButtonManager : MonoBehaviour
     }
     public void selectTarget(){
         
+        // character?.Invoke();
     }
     public void selectSkill(){
-        
+        // skill?.Invoke();
     }
 
     // Update is called once per frame

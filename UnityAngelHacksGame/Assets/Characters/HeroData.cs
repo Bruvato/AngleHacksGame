@@ -10,6 +10,7 @@ public class HeroData : ScriptableObject
     public int atk, def, vit;
     public int characterId;
     public Sprite highRes, front, right, left, back;
+    public GameObject battleCanvas;
     
     
 

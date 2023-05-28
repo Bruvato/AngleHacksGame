@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a4c91485cf540a3b661d327cb9ab0e, type: 3}
   m_Name: Skill
   m_EditorClassIdentifier: 
+  skillName: strike
+  atkmult: 1
+  defmult: 0
+  healmult: 0
+  lifestealmult: 0
+  debuffmult: 0
