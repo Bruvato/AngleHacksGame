@@ -12,6 +12,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip sfx;
 
+    [SerializeField] private GameObject player;
+
     private int i;
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            player.SetActive(false);
         }
     }
 }

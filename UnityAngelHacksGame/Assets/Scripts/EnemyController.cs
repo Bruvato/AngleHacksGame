@@ -8,12 +8,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float maxDist;
 
+    [SerializeField] Animator animator;
+
+
     private Vector2 wayypoint;
 
 
     void Start()
     {
         SetNewDestLoc();
+        animator.SetBool("isMoving", true);
+
     }
 
     // Update is called once per frame
@@ -25,6 +30,9 @@ public class EnemyController : MonoBehaviour
             SetNewDestLoc();
 
         }
+        animator.SetFloat("horizontal", wayypoint.x - transform.position.x);
+        animator.SetFloat("vertical", wayypoint.y - transform.position.y);
+
     }
 
     private void SetNewDestLoc()
@@ -32,9 +40,10 @@ public class EnemyController : MonoBehaviour
         wayypoint = new Vector2(Random.Range(-maxDist, maxDist), Random.Range(-maxDist, maxDist));
 
     }
-    void OnTriggerEnter(Collider collider)
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("enemy collided");
+        Debug.Log(other);
     }
 
 
