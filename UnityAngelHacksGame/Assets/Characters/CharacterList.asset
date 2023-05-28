@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cbbc063522f4387906fd41d88327d1, type: 3}
   m_Name: CharacterList
   m_EditorClassIdentifier: 
-  characters: []
+  characters:
+  - {fileID: 0}
