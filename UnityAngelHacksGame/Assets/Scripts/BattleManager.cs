@@ -26,18 +26,19 @@ public class BattleManager : MonoBehaviour
 
     }
     public int getSelectedCharacterIndex(){
-        for (int i = 0; i < party.length; i++)
+        for (int i = 0; i < party.GetLength(0); i++)
         {
             if(party[i]==selectedCharacterId){
                 return i;
             }
         }
+        return 0;
     }
     void Awake()
     {
 
 
-        skillActive == true;
+        skillActive = true;
         
     }
 
