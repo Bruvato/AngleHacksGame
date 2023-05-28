@@ -21,6 +21,9 @@ public class Character : MonoBehaviour
     
     void Update()
     {
+        if(currentHp<0){
+            Destroy(gameObject);
+        }
         Debug.Log("stam regen");
         currentStam += (int)Mathf.Round(heroData.vit*Time.deltaTime+1);
         if(currentStam>trueMaxStam){
