@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("horizontal", movementInput.x);
         animator.SetFloat("vertical", movementInput.y);
 
+
     }
 
     private bool TryMove(Vector2 direction)
