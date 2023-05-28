@@ -52,9 +52,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.SetBool("isMoving", false);
-                animator.SetFloat("horizontal", movementInput.x);
-                animator.SetFloat("vertical", movementInput.y);
-
             }
 
         }
