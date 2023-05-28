@@ -18,7 +18,7 @@ MonoBehaviour:
   atk: 10
   def: 10
   vit: 10
-  heroId: 1
+  heroId: 2
   characterId: 10
   highRes: {fileID: 21300000, guid: d220cde58b6bd41c98b38e0e95e96574, type: 3}
   front: {fileID: 21300000, guid: e78e88a3bb65c4eda979605bd6f38ef7, type: 3}
