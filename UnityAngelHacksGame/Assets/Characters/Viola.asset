@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbd6ded5370348429b7591544fed3c9, type: 3}
-  m_Name: Melonie
+  m_Name: Viola
   m_EditorClassIdentifier: 
-  heroName: Melonie
+  heroName: V
   maxHp: 100
   maxStam: 100
   atk: 10
   def: 10
   vit: 10
-  heroId: 0
+  heroId: 1
   characterId: 10
   highRes: {fileID: 21300000, guid: d220cde58b6bd41c98b38e0e95e96574, type: 3}
   front: {fileID: 21300000, guid: e78e88a3bb65c4eda979605bd6f38ef7, type: 3}

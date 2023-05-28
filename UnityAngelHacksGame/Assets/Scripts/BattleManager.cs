@@ -30,7 +30,9 @@ public class BattleManager : MonoBehaviour
         {
             if(party[i]==selectedCharacterId){
                 return i;
+                
             }
+
         }
         return 0;
     }
