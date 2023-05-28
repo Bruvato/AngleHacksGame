@@ -11,6 +11,7 @@ public class BattleManager : MonoBehaviour
     // private 
 
     [SerializeField]private Character[] party = new Character[3];
+    [SerializeField]private Character[] partyOrder = new Character[3];
     
     [SerializeField]private Character selectedCharacter;
     [SerializeField]private int selectedCharacterId, currentCharacterIndex;
@@ -55,6 +56,7 @@ public class BattleManager : MonoBehaviour
     {
         orderList = new Dictionary<int, Character>();
         int count =0;
+        partyOrder = party;
         foreach (Character c in party)
         {
             Debug.Log(c);
@@ -77,22 +79,49 @@ public class BattleManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha1)){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[0].getId())){
-                    Debug.Log("switch");
                     SelectCharacter(orderList[0]);
+                    ArrangeParty(0);
                 }
             }else if(skillActive == true){
-                Debug.Log("skill");
+                
             }
         }
         if(Input.GetKeyDown(KeyCode.Alpha2)){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[1].getId())){
-                    Debug.Log("switch");
                     SelectCharacter(orderList[1]);
+                    ArrangeParty(1);
+
                 }
             }else if(skillActive == true){
-                Debug.Log("skill");
             }
         }
+        if(Input.GetKeyDown(KeyCode.Alpha3)){
+            if(skillActive !=true){
+                if(currentCharacterIndex != getTargetedCharacterIndex(orderList[2].getId())){
+                    SelectCharacter(orderList[2]);
+                    ArrangeParty(2);
+
+                }
+            }else if(skillActive == true){
+            }
+        }
+    }
+
+    void ArrangeParty(int num){
+        // partyOrder[getTargetedCharacterIndex(orderList[0].getId(num))]
+        partyOrder[getTargetedCharacterIndex(orderList[num].getId())]=null;
+
+        for (int i = partyOrder.GetLength(0)-1; i > 0; i--)
+        {   
+            Debug.Log(i);
+            if(partyOrder[i]==null){
+                partyOrder[i]=partyOrder[i-1];
+                partyOrder[i-1]=null;
+            }
+        }
+        partyOrder[0]= orderList[num];
+        Debug.Log(partyOrder);
+
     }
 }
