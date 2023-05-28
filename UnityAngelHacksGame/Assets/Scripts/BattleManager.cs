@@ -57,6 +57,7 @@ public class BattleManager : MonoBehaviour
         orderList = new Dictionary<int, Character>();
         int count =0;
         partyOrder = party;
+        selectedCharacterId = partyOrder[0].getId();
         foreach (Character c in party)
         {
             Debug.Log(c);
@@ -75,10 +76,12 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if(Input.GetKeyDown(KeyCode.Alpha1)){
             if(skillActive !=true){
+                // Debug.Log(currentCharacterIndex);
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[0].getId())){
+
                     SelectCharacter(orderList[0]);
                     ArrangeParty(0);
                 }
@@ -87,8 +90,11 @@ public class BattleManager : MonoBehaviour
             }
         }
         if(Input.GetKeyDown(KeyCode.Alpha2)){
+
             if(skillActive !=true){
+            Debug.Log(getTargetedCharacterIndex(orderList[1].getId()));
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[1].getId())){
+
                     SelectCharacter(orderList[1]);
                     ArrangeParty(1);
 

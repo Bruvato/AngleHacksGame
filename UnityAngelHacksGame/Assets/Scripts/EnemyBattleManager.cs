@@ -17,6 +17,8 @@ public class EnemyBattleManager : MonoBehaviour
     [SerializeField]private int selectedCharacterId, currentCharacterIndex;
     private bool skillActive;
     private Skill selectedSkill;
+    private bool a0, a1, a2;
+    public string atk;
 
     public void SelectSkill(Skill action){
         selectedSkill = action;
@@ -48,17 +50,32 @@ public class EnemyBattleManager : MonoBehaviour
             if(party[i].getId()==id){
                 return i;
             }
-
+            
         }
         return 0;
     }
     void Awake()
     {
+
+        
         orderList = new Dictionary<int, Character>();
         int count =0;
         partyOrder = party;
+
+        for (int i = 0; i < party.GetLength(0); i++)
+        {
+            for (int j = i+1; j < party.GetLength(0); j++)
+            {
+                if(party[i].getId()==party[j].getId()){
+                    party[j].incrementId(1);
+                }
+            }
+        }
+        
+
         foreach (Character c in party)
         {
+            
             Debug.Log(c);
             Debug.Log(count);
 
@@ -76,7 +93,7 @@ public class EnemyBattleManager : MonoBehaviour
     void Update()
     {
         //
-        if(Input.GetKeyDown(KeyCode.Alpha1)){
+        if("a0" ==atk){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[0].getId())){
                     SelectCharacter(orderList[0]);
@@ -86,7 +103,7 @@ public class EnemyBattleManager : MonoBehaviour
                 
             }
         }
-        if(Input.GetKeyDown(KeyCode.Alpha2)){
+        if("a1" ==atk){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[1].getId())){
                     SelectCharacter(orderList[1]);
@@ -96,7 +113,7 @@ public class EnemyBattleManager : MonoBehaviour
             }else if(skillActive == true){
             }
         }
-        if(Input.GetKeyDown(KeyCode.Alpha3)){
+        if("a2" ==atk){
             if(skillActive !=true){
                 if(currentCharacterIndex != getTargetedCharacterIndex(orderList[2].getId())){
                     SelectCharacter(orderList[2]);
@@ -126,5 +143,8 @@ public class EnemyBattleManager : MonoBehaviour
     }
     public Character[] getPartyOrder(){
         return partyOrder;
+    }
+    public Character[] getParty(){
+        return party;
     }
 }

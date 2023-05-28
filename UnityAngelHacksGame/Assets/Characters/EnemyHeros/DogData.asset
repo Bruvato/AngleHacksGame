@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbd6ded5370348429b7591544fed3c9, type: 3}
-  m_Name: BaldData
+  m_Name: DogData
   m_EditorClassIdentifier: 
   isEnemy: 1
-  heroName: Baldie
+  heroName: Doggie
   maxHp: 100
   maxStam: 100
   atk: 10

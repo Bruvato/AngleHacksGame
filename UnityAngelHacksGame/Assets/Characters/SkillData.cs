@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Skill", menuName = "~/Skill", order = 0)]
-public class Skill : ScriptableObject {
+[CreateAssetMenu(fileName = "SkillData", menuName = "~/Skill", order = 0)]
+public class SkillData : ScriptableObject {
 
     public string skillName;
     public float atkmult = 0f;

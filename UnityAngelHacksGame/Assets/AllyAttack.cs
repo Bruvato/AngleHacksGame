@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class AllyAttack : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private BattleManager battleManager;
     [SerializeField] private EnemyBattleManager enemyBattleManager;
 
     [SerializeField] private Character enemyCharacter;
-    [SerializeField] private List<SkillData> enemySkills;
+    [SerializeField] private List<SkillData> Skills;
     [SerializeField] private UseSkill UseSkill;
     [SerializeField]private static bool onCoolDown, toggle;
     [SerializeField]public string attack;
@@ -26,8 +26,12 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyCharacter.getCurrentStam()==100){
-            AttackLoop(enemySkills[0]);
+        if(Input.GetKeyDown(KeyCode.A)){
+            AttackLoop(Skills[0]);
+
+        }
+        if(Input.GetKeyDown(KeyCode.B)){
+            AttackLoop(Skills[1]);
 
         }
     }
@@ -43,21 +47,18 @@ public class EnemyAttack : MonoBehaviour
     }
     void AttackLoop(SkillData skill){
         
+
         if(onCoolDown != true){
             onCoolDown =true;
-
-            if(Random.Range(0,10)>5){
             Debug.Log(enemyCharacter);
             enemyCharacter.reduceStamina(100);
-            UseSkill.Cast(enemyCharacter, battleManager.getPartyOrder()[0], skill);
+            UseSkill.Cast(enemyCharacter, enemyBattleManager.getPartyOrder()[0], skill);
+
             
-            enemyBattleManager.atk = attack;
-            }
         } else if (toggle ==false){
             
             StartCoroutine(CoolDown(1));
 
         }
     }
-
 }

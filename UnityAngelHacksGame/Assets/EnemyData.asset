@@ -9,19 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbd6ded5370348429b7591544fed3c9, type: 3}
-  m_Name: BaldData
+  m_Script: {fileID: 11500000, guid: 431470ae6267a4f1ead2727dde2a04fe, type: 3}
+  m_Name: EnemyData
   m_EditorClassIdentifier: 
-  isEnemy: 1
-  heroName: Baldie
-  maxHp: 100
-  maxStam: 100
-  atk: 10
-  def: 10
-  vit: 10
-  heroId: 100
-  characterId: 10
-  highRes: {fileID: 21300000, guid: 3a224c09626d2401a80aaf483a938a14, type: 3}
+  EnemyName: 
+  maxHp: 0
+  maxStam: 0
+  atk: 0
+  def: 0
+  vit: 0
+  EnemyId: 0
+  characterId: 0
+  highRes: {fileID: 0}
   front: {fileID: 0}
   right: {fileID: 0}
   left: {fileID: 0}

@@ -5,9 +5,10 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] private HeroData heroData;
+    
 
     // Start is called before the first frame update
-    private int trueMaxHp, currentHp, trueMaxStam, currentStam, characterId, level;
+    [SerializeField]private int trueMaxHp, currentHp, trueMaxStam, currentStam, characterId, level;
     void Awake(){
         trueMaxHp = heroData.maxHp;
         currentHp = trueMaxHp;
@@ -20,7 +21,8 @@ public class Character : MonoBehaviour
     
     void Update()
     {
-        currentStam += (int)Mathf.Round(heroData.vit*Time.deltaTime);
+        Debug.Log("stam regen");
+        currentStam += (int)Mathf.Round(heroData.vit*Time.deltaTime+1);
         if(currentStam>trueMaxStam){
             currentStam = trueMaxStam;
         }
@@ -41,5 +43,8 @@ public class Character : MonoBehaviour
     }
     public void reduceHp(int amount){
         currentHp -= amount;
+    }
+    public void incrementId(int amount){
+        characterId += amount;
     }
 }
