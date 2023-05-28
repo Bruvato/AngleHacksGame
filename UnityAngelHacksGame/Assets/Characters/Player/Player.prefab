@@ -147,6 +147,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  characterPrefab: {fileID: 0}
+  characters:
+  - {fileID: 0}
+  posHistory: []
+  gap: 1
 --- !u!50 &1850506566756751365
 Rigidbody2D:
   serializedVersion: 4
