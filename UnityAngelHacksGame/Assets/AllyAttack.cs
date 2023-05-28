@@ -27,11 +27,12 @@ public class AllyAttack : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.A)){
+            
             AttackLoop(Skills[0]);
 
         }
         if(Input.GetKeyDown(KeyCode.B)){
-            AttackLoop(Skills[1]);
+            // AttackLoop(Skills[1]);
 
         }
     }

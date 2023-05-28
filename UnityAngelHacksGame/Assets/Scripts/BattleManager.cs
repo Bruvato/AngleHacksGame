@@ -133,4 +133,10 @@ public class BattleManager : MonoBehaviour
     public Character[] getPartyOrder(){
         return partyOrder;
     }
+    public Character[] getParty(){
+        return party;
+    }
+    public Character getSelected(){
+        return selectedCharacter;
+    }
 }
