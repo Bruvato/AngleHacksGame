@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class BattleManager : MonoBehaviour
 {
     private Dictionary<int, Character> orderList;//character, id
-    [SerializeField]private ButtonManager bManager;
+    // [SerializeField]private ButtonManager bManager;
     // Start is called before the first frame update
     // private 
 
