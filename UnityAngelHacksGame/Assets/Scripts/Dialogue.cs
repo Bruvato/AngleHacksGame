@@ -39,12 +39,6 @@ public class Dialogue : MonoBehaviour
                 textCompenent.text = lines[i];
             }
         }
-
-        if (i == 1)
-        {
-            melonie.SetActive(true);
-
-        }
     }
 
     private void StartDialogue()
