@@ -13,6 +13,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private AudioClip sfx;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject melonie;
 
     private int i;
     // Start is called before the first frame update
@@ -37,6 +38,12 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textCompenent.text = lines[i];
             }
+        }
+
+        if (i == 1)
+        {
+            melonie.SetActive(true);
+
         }
     }
 
