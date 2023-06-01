@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75988337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 531514470}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75988337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +670,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e0bc9110c2f463cb3658a05be6bfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 1770249274}
+  dialogueText: {fileID: 1010225957}
+  animator: {fileID: 1127709144}
+  textSpeed: 0.05
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1034,7 @@ GameObject:
   - component: {fileID: 1127709141}
   - component: {fileID: 1127709143}
   - component: {fileID: 1127709142}
+  - component: {fileID: 1127709144}
   m_Layer: 5
   m_Name: dialogue box
   m_TagString: Untagged
@@ -1086,6 +1103,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127709140}
   m_CullTransparentMesh: 1
+--- !u!95 &1127709144
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127709140}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43e8ffe78925b4fbbb641bfdf453786f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1141738202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1567012875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145037,8 +145074,9 @@ GameObject:
   - component: {fileID: 1973112786}
   - component: {fileID: 1973112785}
   - component: {fileID: 1973112784}
+  - component: {fileID: 1973112787}
   m_Layer: 5
-  m_Name: test button
+  m_Name: trigger button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145108,7 +145146,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1973112785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1973112787}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1973112785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145147,6 +145197,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973112782}
   m_CullTransparentMesh: 1
+--- !u!114 &1973112787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973112782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7670fab0210475f85f8367b5cb4342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Melonie
+    sentences:
+    - 'one one one one one one one one one one one one one one one one one one one
+      one one one one one one one one one one one one one one '
+    - 'two two two two two two two two two two two two two two two two two two two
+      two two two two two two two two two two two two two two two two two two '
+    - 'three three three three three three three three three three three three three
+      three three three three three three three three three three three three three
+      three three '
 --- !u!1001 &1850506566756751360
 PrefabInstance:
   m_ObjectHideFlags: 0
