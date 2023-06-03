@@ -12,6 +12,7 @@ public class SkillData : ScriptableObject {
     public float healmult = 0f;
     public float lifestealmult = 0f;
     public float debuffmult = 0f;
-    
-    
+    public bool fullblock =false;
+    public bool aoe =false;
+
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class EnemyBattleManager : MonoBehaviour
 {
@@ -92,6 +93,16 @@ public class EnemyBattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(selectedCharacter == null){
+            for (int i = 0; i < partyOrder.GetLength(0); i++)
+            {
+                if(partyOrder[i]!=null){
+                    
+                    SelectCharacter(partyOrder[i]);
+                    ArrangeParty(i);
+                }
+            }
+        }
         //
         if("a0" ==atk){
             if(skillActive !=true){
@@ -123,6 +134,11 @@ public class EnemyBattleManager : MonoBehaviour
             }else if(skillActive == true){
             }
         }
+        if(party[0]==null&&party[1]==null&&party[2]==null){
+            SceneManager.LoadScene("SampleScene");
+
+
+        }
     }
 
     void ArrangeParty(int num){
@@ -139,6 +155,10 @@ public class EnemyBattleManager : MonoBehaviour
         }
         partyOrder[0]= orderList[num];
         Debug.Log(partyOrder);
+        for (int i = 0; i < partyOrder.GetLength(0); i++)
+        {
+            partyOrder[i].gameObject.GetComponent<Transform>().localPosition = new Vector2(0.2f*i,0f);
+        }
 
     }
     public Character[] getPartyOrder(){

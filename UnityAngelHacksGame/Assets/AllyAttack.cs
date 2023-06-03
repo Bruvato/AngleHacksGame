@@ -8,12 +8,13 @@ public class AllyAttack : MonoBehaviour
     [SerializeField] private BattleManager battleManager;
     [SerializeField] private EnemyBattleManager enemyBattleManager;
 
-    [SerializeField] private Character enemyCharacter;
-    [SerializeField] private List<SkillData> Skills;
+    [SerializeField] private Character allyCharacter;
+    [SerializeField] public List<SkillData> skills;
     [SerializeField] private UseSkill UseSkill;
     [SerializeField]private static bool onCoolDown, toggle;
     [SerializeField]public string attack;
     public static int c = 0;
+    private float target;
 
     void Awake()
     {
@@ -21,20 +22,14 @@ public class AllyAttack : MonoBehaviour
         c++;
         onCoolDown =false;
         toggle = false;
+        // target = 0;
     }
     
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A)){
-            
-            AttackLoop(Skills[0]);
-
-        }
-        if(Input.GetKeyDown(KeyCode.B)){
-            // AttackLoop(Skills[1]);
-
-        }
+        
+        // Lerper();
     }
     private static IEnumerator CoolDown(float cd){
         toggle = true;
@@ -46,15 +41,23 @@ public class AllyAttack : MonoBehaviour
         onCoolDown =false;
         toggle = false;
     }
-    void AttackLoop(SkillData skill){
+    public void AttackLoop(SkillData skill){
         
 
         if(onCoolDown != true){
-            onCoolDown =true;
-            Debug.Log(enemyCharacter);
-            enemyCharacter.reduceStamina(100);
-            UseSkill.Cast(enemyCharacter, enemyBattleManager.getPartyOrder()[0], skill);
-
+            // onCoolDown =true;
+            Debug.Log("allyAttack");
+            // target = 1;
+            allyCharacter.reduceStamina(100);
+            UseSkill.Cast(allyCharacter, enemyBattleManager.getPartyOrder()[0], skill);
+            if(skill.aoe ==true){
+                if(enemyBattleManager.getPartyOrder()[1]!=null){
+                UseSkill.Cast(allyCharacter, enemyBattleManager.getPartyOrder()[1], skill);
+                }
+                if(enemyBattleManager.getPartyOrder()[2]!= null){
+                UseSkill.Cast(allyCharacter, enemyBattleManager.getPartyOrder()[2], skill);
+                }
+            }
             
         } else if (toggle ==false){
             
@@ -62,4 +65,11 @@ public class AllyAttack : MonoBehaviour
 
         }
     }
+    // public void Lerper(){
+
+    //     current = Mathf.MoveTowards(current, target, speed);
+    //     Vector2 og = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
+    //     Vector2 tgt = new Vector2(0,gameObject.transform.position.y);
+    //     transform.position = new
+    // }
 }

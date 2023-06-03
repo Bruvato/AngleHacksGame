@@ -44,9 +44,10 @@ public class EnemyAttack : MonoBehaviour
     void AttackLoop(SkillData skill){
         
         if(onCoolDown != true){
-            onCoolDown =true;
 
             if(Random.Range(0,10)>5){
+            onCoolDown =true;
+
             Debug.Log(enemyCharacter);
             enemyCharacter.reduceStamina(100);
             UseSkill.Cast(enemyCharacter, battleManager.getPartyOrder()[0], skill);
