@@ -43,7 +43,7 @@ public class EnemyAttack : MonoBehaviour
     }
     void AttackLoop(SkillData skill){
         
-        if(onCoolDown != true){
+        if(onCoolDown != true&& enemyCharacter.getCurrentStam()==100){
 
             if(Random.Range(0,10)>5){
             onCoolDown =true;

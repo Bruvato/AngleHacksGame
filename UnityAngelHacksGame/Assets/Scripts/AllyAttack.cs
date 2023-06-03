@@ -48,6 +48,7 @@ public class AllyAttack : MonoBehaviour
             // onCoolDown =true;
             Debug.Log("allyAttack");
             // target = 1;
+            if(allyCharacter.getCurrentStam()==100){
             allyCharacter.reduceStamina(100);
             UseSkill.Cast(allyCharacter, enemyBattleManager.getPartyOrder()[0], skill);
             if(skill.aoe ==true){
@@ -57,7 +58,7 @@ public class AllyAttack : MonoBehaviour
                 if(enemyBattleManager.getPartyOrder()[2]!= null){
                 UseSkill.Cast(allyCharacter, enemyBattleManager.getPartyOrder()[2], skill);
                 }
-            }
+            }}
             
         } else if (toggle ==false){
             
