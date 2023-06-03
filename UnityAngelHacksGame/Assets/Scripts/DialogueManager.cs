@@ -16,6 +16,11 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private string sentence;
 
+    [SerializeField] private SpriteManager spriteManager;
+
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -29,6 +34,8 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogue.name;
 
         sentences.Clear();
+
+        spriteManager.UpdateSprites();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -80,6 +87,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            source.PlayOneShot(clip);
             yield return new WaitForSeconds(textSpeed);
         }
     }
@@ -87,6 +95,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        spriteManager.DisableSprites();
 
     }
 }

@@ -9,13 +9,11 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("Start");
         SceneManager.LoadScene("SampleScene");
     }
-    public void Settings()
+    public void Credits()
     {
-        Debug.Log("Settings");
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("Credits");
     }
     public void Quit()
     {
