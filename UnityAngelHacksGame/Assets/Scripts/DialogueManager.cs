@@ -21,6 +21,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
 
+    private Dialogue d;
+
+    public bool occupied;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -36,6 +40,11 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
 
         spriteManager.UpdateSprites();
+
+        d = dialogue;
+        d.inConversation = true;
+
+        occupied = true;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -96,6 +105,9 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         spriteManager.DisableSprites();
+
+        d.inConversation = false;
+        occupied = false;
 
     }
 }

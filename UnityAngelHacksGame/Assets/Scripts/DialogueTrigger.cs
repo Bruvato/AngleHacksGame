@@ -9,11 +9,13 @@ public class DialogueTrigger : MonoBehaviour
 
     public void OnMouseDown()
     {
-        TriggerDialogue();
+        if (!FindObjectOfType<DialogueManager>().occupied)
+            TriggerDialogue();
     }
     public void OnMouseEnter()
     {
-        GetComponent<SpriteRenderer>().color = Color.grey;
+        if (!FindObjectOfType<DialogueManager>().occupied)
+            GetComponent<SpriteRenderer>().color = Color.grey;
     }
     public void OnMouseExit()
     {

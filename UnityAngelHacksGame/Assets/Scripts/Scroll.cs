@@ -15,7 +15,7 @@ public class Scroll : MonoBehaviour
 
     IEnumerator closeScroll()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         animator.SetBool("isOpen", false);
 
     }

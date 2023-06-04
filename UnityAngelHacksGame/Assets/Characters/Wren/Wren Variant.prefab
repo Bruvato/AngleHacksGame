@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2366734960185858336
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6920164056106130999}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757320, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: waypoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757330, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_Name
+      value: Wren
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757332, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: dialogue.name
+      value: Wren
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757332, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757332, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "\u201CHey hey!! I\u2019m Wren, like the bird!\u201D\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757332, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "In a childhood filled with imagination, my parents nurtured my love
+        for storytelling and playful nature, sparking a fondness for gummy worms
+        as my cherished indulgence.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757333, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89e8c53d0884b4645b01feb00b31eaf3, type: 3}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757334, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670523511947757335, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 64607bfddeacc014093b4bfe73d57d00, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+--- !u!95 &6920164056106130999 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4670523511947757335, guid: a5bacf6a86a584f42a1352527f2fa012, type: 3}
+  m_PrefabInstance: {fileID: 2366734960185858336}
+  m_PrefabAsset: {fileID: 0}
