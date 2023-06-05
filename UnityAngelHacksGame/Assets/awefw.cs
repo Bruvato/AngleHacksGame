@@ -10,13 +10,13 @@ public class awefw : MonoBehaviour
 
     void Start()
     {
-        if(ooo.GetHp()<=0)
-        obj.active=true;
+        // if(ooo.GetHp()<=0)
+        // obj.active=true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

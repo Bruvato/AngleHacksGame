@@ -4,47 +4,46 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float spped;
-    [SerializeField] private float range;
-    [SerializeField] private float maxDist;
+    private bool chasing;
+    private Transform player;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed;
 
-    [SerializeField] Animator animator;
-
-
-    private Vector2 wayypoint;
-
-
-    void Start()
+    private void OnBecameVisible()
     {
-        SetNewDestLoc();
-        animator.SetBool("isMoving", true);
-
+        chasing = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnBecameInvisible()
     {
-        transform.position = Vector2.MoveTowards(transform.position, wayypoint, spped * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayypoint) < range)
+        chasing = false;
+    }
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerController>().gameObject.transform;
+    }
+    private void Update()
+    {
+        animator.SetFloat("horizontal", rb.velocity.x);
+        animator.SetFloat("vertical", rb.velocity.y);
+
+        if (chasing)
         {
-            SetNewDestLoc();
-
+            rb.AddForce((player.position - transform.position) * moveSpeed, ForceMode2D.Force);
+            //transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
-        animator.SetFloat("horizontal", wayypoint.x - transform.position.x);
-        animator.SetFloat("vertical", wayypoint.y - transform.position.y);
 
     }
 
-    private void SetNewDestLoc()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        wayypoint = new Vector2(Random.Range(-maxDist, maxDist), Random.Range(-maxDist, maxDist));
-
+        if (other.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+            other.gameObject.GetComponent<PlayerStats>().TakeDmg(10);
+        }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other);
-    }
-
 
 }
