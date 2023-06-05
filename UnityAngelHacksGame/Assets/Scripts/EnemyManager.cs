@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject[] enemies;
     [SerializeField] Transform[] spawnpoints;
     [SerializeField] public float spawnTime;
+    [SerializeField] private float enemyCap;
     private void Start()
     {
         StartCoroutine(SpawnEnemy());

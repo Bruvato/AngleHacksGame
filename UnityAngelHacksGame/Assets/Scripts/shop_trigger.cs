@@ -7,11 +7,13 @@ public class shop_trigger : MonoBehaviour
     [SerializeField] private Animator animator;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        animator.SetBool("shopOpen", true);
+        if (other.gameObject.name == "Player")
+            animator.SetBool("shopOpen", true);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        animator.SetBool("shopOpen", false);
+        if (other.gameObject.name == "Player")
+            animator.SetBool("shopOpen", false);
 
     }
 }

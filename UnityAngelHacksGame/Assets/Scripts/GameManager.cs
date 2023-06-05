@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     private EnemyManager enemyManager;
+    [SerializeField] private GameObject youDiedScreen;
 
     private void Awake()
     {
@@ -23,9 +24,14 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(60);
 
             enemyManager.spawnTime /= 2;
+
+            if (enemyManager.spawnTime < 1)
+            {
+                StopAllCoroutines();
+            }
 
         }
 
@@ -33,7 +39,12 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        Debug.Log("GAME OVER");
+        youDiedScreen.SetActive(true);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
 }

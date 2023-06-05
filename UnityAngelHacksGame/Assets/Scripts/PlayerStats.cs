@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour
     {
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthBar(health, maxHealth);
+
+
     }
 
     public void TakeDmg(float amount)
@@ -23,6 +25,14 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             gameManager.Lose();
+        }
+    }
+
+    private void heal()
+    {
+        if (health < maxHealth)
+        {
+
         }
     }
 }
