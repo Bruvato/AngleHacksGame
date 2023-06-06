@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 3622762764151729027}
   - component: {fileID: 3622762764151729049}
   - component: {fileID: -947655013964523956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   rb: {fileID: 0}
-  moveSpeed: 0
+  moveSpeed: 0.1
 --- !u!95 &3622762764151729049
 Animator:
   serializedVersion: 4

@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 7444634738385403130}
     - target: {fileID: 3622762764151729027, guid: 9055148e77fde254db38680da94acc5a, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3622762764151729048, guid: 9055148e77fde254db38680da94acc5a, type: 3}
       propertyPath: m_RootOrder
@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 608e27d189ebc0e4e8273e9627eaaaa3, type: 3}
+    - target: {fileID: 3622762764151729051, guid: 9055148e77fde254db38680da94acc5a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3622762764151729052, guid: 9055148e77fde254db38680da94acc5a, type: 3}
       propertyPath: m_Name
       value: rac Variant

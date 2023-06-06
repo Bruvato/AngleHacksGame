@@ -29,9 +29,10 @@ public class EnemyController : MonoBehaviour
         animator.SetFloat("horizontal", rb.velocity.x);
         animator.SetFloat("vertical", rb.velocity.y);
 
-        if (chasing)
+        if (true)
         {
-            rb.AddForce((player.position - transform.position) * moveSpeed, ForceMode2D.Force);
+            // rb.AddForce((player.position - transform.position) * moveSpeed, ForceMode2D.Impulse);
+            rb.velocity = (player.position - transform.position) * moveSpeed;
             //transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
 

@@ -7,13 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    private EnemyManager enemyManager;
+    [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private GameObject youDiedScreen;
 
-    private void Awake()
-    {
-        enemyManager = FindObjectOfType<EnemyManager>().GetComponent<EnemyManager>();
-    }
 
     private void Start()
     {
