@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] enemies;
+    [SerializeField] public GameObject[] enemies;
     [SerializeField] Transform[] spawnpoints;
     [SerializeField] public float spawnTime;
     [SerializeField] private float enemyCap;

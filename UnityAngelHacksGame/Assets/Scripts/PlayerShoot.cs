@@ -23,6 +23,6 @@ public class PlayerShoot : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePointPosition, Quaternion.identity);
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-        bulletRB.velocity = direction * 10f; // Adjust the bullet's speed as needed
+        bulletRB.velocity = direction * 5; // Adjust the bullet's speed as needed
     }
 }

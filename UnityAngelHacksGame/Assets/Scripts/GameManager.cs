@@ -20,9 +20,14 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(60);
+            yield return new WaitForSeconds(30);
 
             enemyManager.spawnTime /= 2;
+            
+            foreach (var enemy in enemyManager.enemies){
+                enemy.GetComponent<EnemyStats>().health += 2;
+                enemy.GetComponent<EnemyStats>().maxHealth += 5;
+            }
 
             if (enemyManager.spawnTime < 1)
             {

@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc16c465ed5e94eb88072e30dc11f9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyManager: {fileID: 0}
+  youDiedScreen: {fileID: 0}

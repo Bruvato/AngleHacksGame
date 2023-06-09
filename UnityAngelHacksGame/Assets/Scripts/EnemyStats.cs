@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] private float health, maxHealth;
+    public float health, maxHealth;
 
     [SerializeField] Healthbar healthbar;
 
@@ -12,6 +12,7 @@ public class EnemyStats : MonoBehaviour
 
     private void Start()
     {
+        health = maxHealth;
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthBar(health, maxHealth);
 

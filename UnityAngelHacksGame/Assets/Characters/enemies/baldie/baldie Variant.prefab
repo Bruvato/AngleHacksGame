@@ -83,6 +83,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: baldie Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4784892127694241660, guid: 9055148e77fde254db38680da94acc5a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784892127694241660, guid: 9055148e77fde254db38680da94acc5a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9055148e77fde254db38680da94acc5a, type: 3}
 --- !u!95 &578199570584526049 stripped
